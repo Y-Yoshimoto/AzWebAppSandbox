@@ -1,0 +1,51 @@
+version: "3"
+services:
+    nginx_forunit:
+        build: nginx_forunit
+        image: webappstestyyreg.azurecr.io/nginx_forunit
+        ports:
+            - "80:80"
+            - "443:443"
+        environment:
+            TZ: Asia/Tokyo
+        #volumes:
+        #     - ./nginx_forunit/contents/:/usr/share/nginx/html/
+    unitpy_api:
+        build: unitpy_api
+        image: webappstestyyreg.azurecr.io/unitpy_api
+        restart: "always"
+        expose:
+            - "8300"
+        environment:
+            TZ: Asia/Tokyo
+            PYTHONUNBUFFERED: "no"
+        #volumes:
+        #    - ./unitpy_api/contents/:/www/ShoppingList/
+    unit_mariadb:
+        build: unit_mariadb
+        image: webappstestyyreg.azurecr.io/unit_mariadb
+        expose:
+            - "3306"
+        restart: "always"
+        environment:
+            MYSQL_ROOT_PASSWORD: unit
+            MYSQL_DATABASE: unit
+            TZ: Asia/Tokyo
+    Sandmail:
+        build: postfix_custom
+        image: webappstestyyreg.azurecr.io/postfix_custom
+        restart: always
+        expose:
+            - "25"
+            - "587"
+        dns: 8.8.8.8
+        environment:
+            TZ: "Asia/Tokyo"
+    express_api:
+        build: express_api
+        image: webappstestyyreg.azurecr.io/express_api
+        restart: always
+        expose:
+            - "8040"
+        environment:
+            TZ: "Asia/Tokyo"

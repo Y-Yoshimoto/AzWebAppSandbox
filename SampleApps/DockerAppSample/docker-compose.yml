@@ -1,0 +1,11 @@
+version: "3"
+services:
+    unitpy_api:
+        build: "unitpy_api"
+        image: "webappstestyyreg.azurecr.io/unitpy_api"
+        restart: "no"
+        ports:
+            - "80:8300"
+        environment:
+            TZ: Asia/Tokyo
+            PYTHONUNBUFFERED: "no"

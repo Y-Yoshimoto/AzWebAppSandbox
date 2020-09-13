@@ -1,0 +1,70 @@
+[
+    {
+        "Name": "shoppinglist_apisample_default",
+        "Id": "d95f3de825f9ff91e90ffa1538bacea3b7b472dac6d255117a1c80895876c871",
+        "Created": "2020-09-13T12:45:24.790378131Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.27.0.0/16",
+                    "Gateway": "172.27.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": true,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "68c0b418d0c3bef6d1bbe7fd26fe449a56865cba6fb7584f1107bc7d2dfa0d27": {
+                "Name": "shoppinglist_apisample_nginx_forunit",
+                "EndpointID": "34ea0e3bef3d1c55d6ef501063714738cf4f6d053ec82325a0d37c5366bf5642",
+                "MacAddress": "02:42:ac:1b:00:05",
+                "IPv4Address": "172.27.0.5/16",
+                "IPv6Address": ""
+            },
+            "74472a85f3e1db3778a1995cd20cba1ec235858aeb5f511cc39572f1280e50ae": {
+                "Name": "shoppinglist_apisample_express_api",
+                "EndpointID": "8b8d7390c99e7d0d8d5e4cfc2dfa2b48d3c9d276c91109e0b949b5c24994eee2",
+                "MacAddress": "02:42:ac:1b:00:04",
+                "IPv4Address": "172.27.0.4/16",
+                "IPv6Address": ""
+            },
+            "8ee36816fbf278dceadf9506e3672e58d47eaf7151d28a82f2fca095cb376493": {
+                "Name": "shoppinglist_apisample_mail",
+                "EndpointID": "b709f06e9ca468bcbb86267d51331b78ec3f337e6737b5620186282322d5d048",
+                "MacAddress": "02:42:ac:1b:00:02",
+                "IPv4Address": "172.27.0.2/16",
+                "IPv6Address": ""
+            },
+            "e5cc7912580a602fae34712304efb36192909c6b6586416d48fe3ae3b68ab3e1": {
+                "Name": "shoppinglist_apisample_unitpy_api",
+                "EndpointID": "6419c0b403767561a30f6d3f30fd9a7c683a436f7b4e205aef31adaf0b64dba1",
+                "MacAddress": "02:42:ac:1b:00:03",
+                "IPv4Address": "172.27.0.3/16",
+                "IPv6Address": ""
+            },
+            "eea271570094b3c3426d4638df008d6be27100d23f8fd8134951b4b5fdf46388": {
+                "Name": "shoppinglist_apisample_unit_mariadb",
+                "EndpointID": "20c5b36e2e4b733f223e4233ec0ff80f777101e7ee92a332a5a0c059b4930cf6",
+                "MacAddress": "02:42:ac:1b:00:06",
+                "IPv4Address": "172.27.0.6/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.network": "default",
+            "com.docker.compose.project": "shoppinglist_apisample",
+            "com.docker.compose.version": "1.26.2"
+        }
+    }
+]
