@@ -29,7 +29,8 @@ Pythonのサンプルコードをデプロイする
  git pull {RepoName} master
 4. Azure上のリポジトリにプッシュ
  git push {RepoName} master  
- **同一リポジトリを流用する場合が -f で強制プッシュする等**
+ **同一リポジトリを流用する場合が -f で強制プッシュする等**  
+ **リポジトリを統合する場合　--allow-unrelated-histories**
 
 ### gitリポジトリの作成
  git init
