@@ -25,7 +25,7 @@ Pythonのサンプルコードをデプロイする
 2. ローカルマシンのリポジトリに、リモートリポジトリとして追加 
  git remote add {RepoName} {URL}
  git remote -v
-3. pull実行 
+3. pull実行 (--set-upstream で固定push/pullリポジトリ指定)
  git pull {RepoName} master
 4. Azure上のリポジトリにプッシュ
  git push {RepoName} master  
